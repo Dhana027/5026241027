@@ -20,13 +20,16 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/pegawai">Pegawai</a>
+                        <a class="nav-link" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Masker</a>
+                        <a class="nav-link" href="/masker">Masker</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 2</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/belanja">PR 2 - Belanja</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PR 3</a>
