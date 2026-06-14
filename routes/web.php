@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\MaskerController;
+use App\Http\Controllers\NilaiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -89,3 +91,17 @@ Route::get('/belanja', [BelanjaController::class, 'index'])->name('keranjangbela
 Route::get('/belanja/create', [BelanjaController::class, 'create'])->name('keranjangbelanja.create');
 Route::post('/belanja', [BelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/belanja/{id}', [BelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
+
+//Route crud masker
+Route::get('/masker', [MaskerController::class, 'index'])->name('masker.index');
+Route::get('/masker/tambah', [MaskerController::class, 'tambah'])->name('masker.tambah');
+Route::post('/masker/store', [MaskerController::class, 'store'])->name('masker.store');
+Route::get('/masker/{kode}/edit', [MaskerController::class, 'edit'])->name('masker.edit');
+Route::post('/masker/update', [MaskerController::class, 'update'])->name('masker.update');
+Route::get('/masker/{kode}/hapus', [MaskerController::class, 'hapus'])->name('masker.hapus');
+Route::get('/masker/cari', [MaskerController::class, 'cari'])->name('masker.cari');
+
+//Route crud Nilai
+Route::get('/nilai', [NilaiController::class, 'index'])->name('nilai.index');
+Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilai.create');
+Route::post('/nilai', [NilaiController::class, 'store'])->name('nilai.store');
