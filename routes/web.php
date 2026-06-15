@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\MaskerController;
 use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\NilaiPesertaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -105,3 +106,8 @@ Route::get('/masker/cari', [MaskerController::class, 'cari'])->name('masker.cari
 Route::get('/nilai', [NilaiController::class, 'index'])->name('nilai.index');
 Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilai.create');
 Route::post('/nilai', [NilaiController::class, 'store'])->name('nilai.store');
+
+//Route crud Nilai_Peserta EAS
+Route::get('/eas', [NilaiPesertaController::class, 'index'])->name('npeas.eas');
+Route::get('/eas/tambah', [NilaiPesertaController::class, 'create'])->name('npeas.eastambah');
+Route::post('/eas', [NilaiPesertaController::class, 'store'])->name('npeas.store');
